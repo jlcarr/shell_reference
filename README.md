@@ -1,7 +1,7 @@
 # shell_reference
 A reference guide for useful shell commands and tools
 
-## FFmpeg
+## FFmpeg (video editing)
 ### How to download video from a website
 1. Find the url of the .m3u8 file
    - Often you can find it either by searching the network tab or page source.
@@ -12,3 +12,12 @@ A reference guide for useful shell commands and tools
    - The quotation marks are important for escaping.
    - You can change the name and type of the output.
    - Look at FFmpeg's documentation for more options.
+
+## grep (searching for text)
+`grep -rnI 'search_regex' .`
+- flags:
+   - `r`: recursively search sub-directories
+   - `n`: return the line-numbers where the text was found
+   - `I`: ignore binary files
+- `'search_regex'` a regex string to match
+- `.` The directory to start the search (in this example the current directory)
