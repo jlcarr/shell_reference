@@ -22,6 +22,13 @@ A reference guide for useful shell commands and tools
 - `'search_regex'` a regex string to match
 - `.` The directory to start the search (in this example the current directory)
 
+## find (searching for a file/directory name)
+`find . -name 'search_regex' -type f`
+- flags:
+   - `-name 'search_regex'`: the regex string to match (omitting will get everything)
+   - `-type f`: search for only files (`-type d` for directories, omit for both)
+- `.` The directory to start the search (in this example the current directory)
+
 ## zip (compressing and encrypting)
 `zip -re output_name.zip 'dir_name'`  
 You will be prompted for a password afterwards  
