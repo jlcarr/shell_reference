@@ -19,15 +19,15 @@ A reference guide for useful shell commands and tools
    - `r`: recursively search sub-directories
    - `n`: return the line-numbers where the text was found
    - `I`: ignore binary files
-- `'search_regex'` a regex string to match
-- `.` The directory to start the search (in this example the current directory)
+- `'search_regex'`: a regex string to match
+- `.`: The directory to start the search (in this example the current directory)
 
 ## find (searching for a file/directory name)
 `find . -name 'search_regex' -type f`
 - flags:
    - `-name 'search_regex'`: the regex string to match (omitting will get everything)
    - `-type f`: search for only files (`-type d` for directories, omit for both)
-- `.` The directory to start the search (in this example the current directory)
+- `.`: The directory to start the search (in this example the current directory)
 
 ## zip (compressing and encrypting)
 `zip -re output_name.zip 'dir_name'`  
@@ -35,5 +35,12 @@ You will be prompted for a password afterwards
 - flags:
    - `r`: recursively add sub-directories
    - `e`: encrypt the result
-- `'dir_name'` The directory containing everything you want zipped
-- `output_name.zip` The outputted zip file name
+- `'dir_name'`: The directory containing everything you want zipped
+- `output_name.zip`: The outputted zip file name
+
+## hashing
+`shasum -a 512256 'file_name'`
+- flags:
+   - `a`: specify which hashing algorithm to use
+- `512256`: choose the SHA 512/256 algorithm (currently considered secure)
+- `'file_name'`: The file containing the data to hash
