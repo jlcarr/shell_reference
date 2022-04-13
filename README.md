@@ -14,6 +14,7 @@ A reference guide for useful shell commands and tools
    - Look at FFmpeg's documentation for more options.
 
 ## grep (searching for text)
+Stands for "Gnu REgex Parser"  
 `grep -rnI 'search_regex' .`
 - flags:
    - `r`: recursively search sub-directories
@@ -43,4 +44,14 @@ You will be prompted for a password afterwards
 - flags:
    - `a`: specify which hashing algorithm to use
 - `512256`: choose the SHA 512/256 algorithm (currently considered secure)
+- `'file_name'`: The file containing the data to hash
+
+## hexdump (view binary value of a file)
+Formats the result into human readable chunk and includes the ascii interpretation as well.  
+`xxd 'file_name'`
+- flags:
+   - `p`: output the plain unformatted hexdump.
+   - `b`: output the result as bits instead of hex
+   - `l`: specify the length of the output (defaults to whole file)
+   - `s`: seek to start the output at a given offset
 - `'file_name'`: The file containing the data to hash
