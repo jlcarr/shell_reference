@@ -15,11 +15,13 @@ A reference guide for useful shell commands and tools
 
 ## grep (searching for text)
 Stands for "Gnu REgex Parser"  
-`grep -rnI 'search_regex' .`
+`grep -rnI --include="*.txt" 'search_regex' .`
 - flags:
    - `r`: recursively search sub-directories
    - `n`: return the line-numbers where the text was found
    - `I`: ignore binary files
+   - `include`: only include files matching the given format string in the search
+      - `"*.txt"`: the format string to match the file name against
 - `'search_regex'`: a regex string to match
 - `.`: The directory to start the search (in this example the current directory)
 
