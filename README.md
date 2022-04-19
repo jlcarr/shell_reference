@@ -57,3 +57,19 @@ Formats the result into human readable chunk and includes the ascii interpretati
    - `l`: specify the length of the output (defaults to whole file)
    - `s`: seek to start the output at a given offset
 - `'file_name'`: The file containing the data to hash
+
+## ps (processes)
+`ps -ef`
+- flags:
+   - `e`: show every process on the system.
+   - `f`: show full formatted listing
+
+### Columns
+- UID: Username of the process's owner
+- PID: Process ID number
+- PPID: ID number of the process's parent process
+- C: CPU usage and scheduling information
+- STIME: Time when the process started
+- TTY: Terminal associated with the process
+- TIME: Total CPU usage
+- CMD: Name of the process, including arguments, if any
