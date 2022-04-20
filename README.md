@@ -1,6 +1,17 @@
 # shell_reference
 A reference guide for useful shell commands and tools
 
+## cd and ls (navigation)
+"change directory"  
+`cd ..`
+- `..`: means 1 directory above
+
+"list"  
+`ls -lh`
+- flags:
+   - `l`: list the results with extra informatation including the permissions, the owner, the size, and last date edited
+   - `h`: show the file size in human-readable format (KB, MB, GB)
+
 ## FFmpeg (video editing)
 ### How to download video from a website
 1. Find the url of the .m3u8 file
@@ -73,3 +84,4 @@ Formats the result into human readable chunk and includes the ascii interpretati
 - TTY: Terminal associated with the process
 - TIME: Total CPU usage
 - CMD: Name of the process, including arguments, if any
+
