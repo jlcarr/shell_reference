@@ -1,16 +1,22 @@
 # shell_reference
 A reference guide for useful shell commands and tools
 
-## cd and ls (navigation)
-"change directory"  
+## Basics
+### Navigation
+#### cd (change directory)
 `cd ..`
 - `..`: means 1 directory above
 
-"list"  
+#### ls (list)
 `ls -lh`
 - flags:
    - `l`: list the results with extra informatation including the permissions, the owner, the size, and last date edited
    - `h`: show the file size in human-readable format (KB, MB, GB)
+
+### file and directory management
+#### mkrdir (make directory)
+`mkdir 'dir_name'`
+- `'dir_name'`: The directory you want to create
 
 ## FFmpeg (video editing)
 ### How to download video from a website
