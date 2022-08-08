@@ -91,3 +91,14 @@ Formats the result into human readable chunk and includes the ascii interpretati
 - TIME: Total CPU usage
 - CMD: Name of the process, including arguments, if any
 
+## du (disk usage)
+`du -ach .`
+- flags:
+   - `a`: show all, i.e. both files and directories (defaults to just directories).
+   - `c`: show a total sum the sizes of all files under the search directory.
+   - `h`: show the file size in human-readable format (KB, MB, GB)
+- `.`: The directory to start the search (in this example the current directory)
+
+### Find the largest files only
+`find . -type f -exec du -h {} + | sort -hr | head -n 10`
+
