@@ -29,6 +29,21 @@ A reference guide for useful shell commands and tools
    - The quotation marks are important for escaping.
    - You can change the name and type of the output.
    - Look at FFmpeg's documentation for more options.
+   
+## John the Ripper (password cracking)
+### Installing on Mac OS
+1. `brew install john-jumbo` Install the complete toolset for John the Ripper (needed for zip cracking)
+2. `export PATH=$PATH:/usr/local/share/john` Add the commands to your path
+
+### How to crack a zip file
+1. `zip2john filename.zip > filename.john` Pull out the password hash
+2. `john --format=PKZIP filename.john` Instruct John to perform the crack
+   - It is advised to use a custom wordlist with the flag `--wordlist path/to/wordlist.txt`
+3. `john --show filename.john` View the result. It will be between the colons with the file name.
+
+#### Example/Test scenario
+1. echo 'This is a test' > filename.txt
+2. zip -re filename.zip 'filename.txt' -P password
 
 ## grep (searching for text)
 Stands for "Gnu REgex Parser"  
